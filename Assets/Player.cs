@@ -35,7 +35,6 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
-
         turn.x += Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
         turn.y += Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
         transform.localRotation = Quaternion.Euler(0, turn.x, 0);

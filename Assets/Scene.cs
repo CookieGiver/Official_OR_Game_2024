@@ -50,7 +50,7 @@ public class Scene : MonoBehaviour
     }
     public void Death()
     {
-        Instantiate(killer, transform.position + new Vector3(0, 0.4f, 0), transform.rotation, transform);
+        Instantiate(killer, transform.position + new Vector3(0, 1f, 0), transform.rotation, transform);
         gameObject.GetComponent<CharcMove>().enabled = false;
         dead = true;
     }

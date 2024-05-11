@@ -24,7 +24,7 @@ public class OpenLock : MonoBehaviour
             {
                 GetComponent<activate>().active = false;
                 player.gameObject.GetComponent<CharcMove>().pause = false;
-                door.gameObject.GetComponent<swing>().goal = 90;
+                door.gameObject.GetComponent<swing>().goal = -90;
                 GetComponent<Transform>().localScale = new Vector3(0, 0, 0);
             }
         }

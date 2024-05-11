@@ -7,4 +7,5 @@ public class activate : MonoBehaviour
     public bool active = false;
 
     public Component activation;
+
 }

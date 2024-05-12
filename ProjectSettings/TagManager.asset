@@ -12,6 +12,8 @@ TagManager:
   - Water
   - UI
   - Ground
+  - Player
+  - Post Processing
   - Item
   - 
   - 

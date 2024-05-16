@@ -42,7 +42,7 @@ public class BasicCamera : MonoBehaviour
 
 
             position.localRotation = Quaternion.Euler(-turn.y, turn.x, 0);
-            position.position = player.position + Vector3.up * 1.5f;
+            position.position = player.position + Vector3.up * 2.5f;
         }
         if (player.gameObject.GetComponent<CharcMove>().pause)
         {

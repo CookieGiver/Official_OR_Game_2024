@@ -12,6 +12,7 @@ public class notebook : MonoBehaviour
     public Canvas canvas;
     public Canvas inv;
     private bool close = false;
+    public BoxCollider col;
     public GameObject camera;
     // Update is called once per frame
     void Update()
@@ -19,7 +20,7 @@ public class notebook : MonoBehaviour
         active = GetComponent<activate>().active;
         if (active)
         {
-            
+            col.enabled = false;
             GameObject button = GameObject.Find("Notebook button");
             Image buttonimg = button.GetComponent<Image>();
             buttonimg.sprite = rt.sprite;

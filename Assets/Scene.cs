@@ -10,9 +10,10 @@ using UnityEngine.UI;
 public class Scene : MonoBehaviour
 {
     public GameObject killer;
-
+    public Canvas deathcanvas;
     public Image panel;
     public TextMeshProUGUI deathScreen;
+    public GameObject player;
 
     public bool dead = false;
     private float alpha = 0f;
@@ -28,7 +29,7 @@ public class Scene : MonoBehaviour
         {
             Death();
             deathScreen.text = "You Died";
-
+            deathcanvas.enabled = enabled;
         }
     }
 
@@ -50,7 +51,8 @@ public class Scene : MonoBehaviour
     }
     public void Death()
     {
-        Instantiate(killer, transform.position + new Vector3(0, 1f, 0), transform.rotation, transform);
+        player.gameObject.GetComponent<CharcMove>().pause = true;
+        Instantiate(killer, transform.position + new Vector3(0, 2f, 0), transform.rotation, transform);
         gameObject.GetComponent<CharcMove>().enabled = false;
         dead = true;
     }

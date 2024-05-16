@@ -18,10 +18,8 @@ public class Player : MonoBehaviour
 
     public Vector3 moveDirection;
 
-    public float groundDrag;
     public float playerHeight;
-    public LayerMask ground;
-    bool grounded;
+
 
     public float sensitivity = 200f;
     public Vector2 turn;
@@ -39,24 +37,6 @@ public class Player : MonoBehaviour
         turn.y += Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
         transform.localRotation = Quaternion.Euler(0, turn.x, 0);
 
-
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, ground);
-        
-        if (grounded)
-        {
-            rb.drag = groundDrag;
-        }
-        else
-        {
-            rb.drag = 0;
-        }
-        Debug.Log(grounded);
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            rb.AddForce(jumpForce * Vector3.up);
-            Debug.Log("Jumped");
-        }
     }
     private void FixedUpdate()
     {

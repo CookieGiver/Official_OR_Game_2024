@@ -21,7 +21,7 @@ public class KeyLock : MonoBehaviour
             Debug.Log(camera.gameObject.GetComponent<selector>().selected);
             if (camera.gameObject.GetComponent<selector>().selected == key)
             {
-                door.gameObject.GetComponent<swing>().goal = 90;
+                door.gameObject.GetComponent<swing>().goal = -90;
                 GetComponent<Transform>().localScale = new Vector3(0, 0, 0);
             }
             GetComponent<activate>().active = false;

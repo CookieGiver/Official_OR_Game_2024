@@ -7,7 +7,7 @@ public class Inventory : MonoBehaviour
     public Canvas self;
     public Image panel;
     public Transform player;
-    private bool open = false;
+    public bool open = false;
     // Start is called before the first frame update
     void Start()
     {

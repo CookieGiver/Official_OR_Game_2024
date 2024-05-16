@@ -35,7 +35,7 @@ public class Laser : MonoBehaviour
 
         for (int i = 0; i < reflections; i++)
         {
-            if (Physics.Raycast(rayOrigin, direction, out hit, 100f))
+            if (Physics.Raycast(rayOrigin, direction, out hit, 100f, Physics.AllLayers, QueryTriggerInteraction.Ignore))
             {
                 if (hit.transform.gameObject.GetComponent<Mirror>() != null)
                 {

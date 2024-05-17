@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class teleport : MonoBehaviour
+public class button : MonoBehaviour
 {
-    public GameObject player;
-    public Vector3 newloc;
+    public GameObject ladder;
+    public Vector3 newpos;
+    public GameObject roof;
     private bool active;
+    // Update is called once per frame
     void Update()
     {
         active = GetComponent<activate>().active;
         if (active)
         {
-            player.transform.position = newloc;
+            ladder.transform.position = ladder.transform.position + newpos;
             GetComponent<activate>().active = false;
-            
         }
     }
 }
